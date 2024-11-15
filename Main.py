@@ -12,6 +12,8 @@ import tensorflow as tf
 import asyncio
 import os
 
+
+
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 gpus = tf.config.list_physical_devices('GPU')
