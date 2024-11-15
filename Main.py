@@ -10,7 +10,9 @@ import numpy as np
 import h5py
 import tensorflow as tf
 import asyncio
+import os
 
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 gpus = tf.config.list_physical_devices('GPU')
 if gpus:
@@ -161,4 +163,4 @@ async def auto_reverify():
                 await verify_user(user)
         await asyncio.sleep(2592000)  # Reverify every 30 days
 
-bot.run("ODY0MjU4OTAwMzI4MTg1ODc3.G3il5P.Q8sVivreyjafI34pVVmJ1WkAfjfv3gjVTSUhAs")
+bot.run(TOKEN)
